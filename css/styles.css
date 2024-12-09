@@ -278,3 +278,134 @@ footer {
     margin-bottom: 15px;
     display: none;
 }
+
+/* Parent container */
+.chat-page {
+    display: flex;
+}
+
+/* Friend List Sidebar */
+.friend-list {
+    width: 25%;
+    border-right: 1px solid #ccc;
+    padding: 1rem;
+    overflow-y: auto;
+    height: calc(100vh - 80px); /* Adjust based on your header/footer height */
+}
+
+.friend-list h3 {
+    margin-bottom: 1rem;
+}
+
+.friend-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.friend-list li {
+    margin-bottom: 0.5rem;
+}
+
+.friend-list li button {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    color: #333;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.friend-list li.active button,
+.friend-list li button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Chat Area */
+.chat-area {
+    width: 75%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-area h2 {
+    margin-bottom: 1rem;
+}
+
+.chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.messages {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    margin-bottom: 1rem;
+}
+
+.message {
+    margin-bottom: 1rem;
+}
+
+.message.sent {
+    text-align: right;
+}
+
+.message p {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    max-width: 70%;
+}
+
+.message.sent p {
+    background-color: #dcf8c6;
+}
+
+.message.received p {
+    background-color: #fff;
+}
+
+.message span {
+    display: block;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+/* Message Form */
+.message-form .input-group {
+    display: flex;
+    align-items: stretch;
+}
+
+.message-form textarea {
+    flex: 1;
+    resize: none;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+}
+
+.message-form button {
+    padding: 0 1.5rem;
+    background-color: #373536;
+    color: white;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.message-form button:hover {
+    background-color: #4a4a4a;
+}
