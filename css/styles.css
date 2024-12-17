@@ -294,7 +294,22 @@ footer {
 }
 
 .friend-list h3 {
-    margin-bottom: 1rem;
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+#addFriendButton {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #373536;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#addFriendButton:hover {
+    background-color: #4a4a4a;
 }
 
 .friend-list ul {

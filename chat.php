@@ -56,6 +56,7 @@ if ($friend_id) {
     <!-- Friend List Sidebar -->
     <div class="friend-list">
         <h3>Friends</h3>
+        <button id="addFriendButton">Add Friend</button>
         <?php if (!empty($friends)): ?>
             <ul>
                 <?php foreach ($friends as $friendItem): ?>
