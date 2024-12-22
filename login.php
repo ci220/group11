@@ -46,6 +46,8 @@
     <script src="js/script.js"></script>
     <script src="js/components.js"></script>
     <script src="js/validate_login.js"></script>
+    <script src="js/modal.js"></script>
+
 
 
 </body>
