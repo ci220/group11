@@ -42,6 +42,12 @@
     </main>
 
     <?php include 'footer.php'; ?>
+ <div id="successModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p id="successMessage"></p>
+    </div>
+</div>
 
     <script src="js/script.js"></script>
     <script src="js/components.js"></script>
