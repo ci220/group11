@@ -43,7 +43,7 @@
                 </div>
                 <button type="submit">Create Account</button>
             </form>
-            <p class="login-text">Already have an account? <a href="login.html">Login</a></p>
+            <p class="login-text">Already have an account? <a href="login.php">Login</a></p>
         </div>
     </main>
 
