@@ -10,7 +10,7 @@ if (session_status() === PHP_SESSION_NONE) {
             <ul class="nav-links">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="messages.php">Messages</a></li>
-                <li><a href="profile.php">Profile</a></li>
+                <li><a href="userprofile.php">Profile</a></li>
                 <li><a href="chat.php">Chat</a></li>
                 <li><a href="logout.php">Logout</a></li>
 
