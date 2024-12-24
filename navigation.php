@@ -20,6 +20,8 @@ if (session_status() === PHP_SESSION_NONE) {
                 <li><a href="index.php">Home</a></li>
                 <li><a href="forums.php">Forums</a></li>
                 <li><a href="login.php">Login</a></li>
+                <li><a href="FAQ.php">FAQ</a></li>
+                <li><a href="contactus.php">Contact Us</a></li>
                 <li><a href="register.php" class="register-btn">Register</a></li>
             </ul>
         <?php endif; ?>
