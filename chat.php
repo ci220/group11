@@ -9,10 +9,19 @@ if (!isset($_SESSION['user_id'])) {
 
 $user_id = $_SESSION['user_id'];
 
-// Fetch friend list
-$stmt = $pdo->prepare("SELECT id, username FROM users WHERE id != :user_id");
+// Fetch the friend list
+$stmt = $pdo->prepare("
+    SELECT users.id, users.username 
+    FROM friends 
+    JOIN users ON friends.friend_id = users.id 
+    WHERE friends.user_id = :user_id
+");
 $stmt->execute([':user_id' => $user_id]);
 $friends = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Determine the selected friend for chatting
+$friend_id = isset($_GET['friend_id']) ? $_GET['friend_id'] : ($friends[0]['id'] ?? null);
+
 
 // Get the friend's user ID from the URL or default to the first friend
 if (isset($_GET['friend_id'])) {
@@ -47,6 +56,24 @@ if ($friend_id) {
     <meta charset="UTF-8">
     <title>Chat with <?= htmlspecialchars($friend['username']); ?></title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+.btn {
+  background-color: DodgerBlue;
+  border-radius: 12px;
+  color: white;
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0px 16px
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+</style>
 </head>
 <body>
     <?php include 'navigation.php'; ?>
@@ -55,8 +82,7 @@ if ($friend_id) {
     <div class="chat-page">
     <!-- Friend List Sidebar -->
     <div class="friend-list">
-        <h3>Friends</h3>
-        <button id="addFriendButton">Add Friend</button>
+        <h3>Friends     <button onclick="window.location.href='find_friends.php'" class="btn">Add <i class="fa fa-plus"></i></button></a></h3> 
         <?php if (!empty($friends)): ?>
             <ul>
                 <?php foreach ($friends as $friendItem): ?>
