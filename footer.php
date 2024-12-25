@@ -7,9 +7,10 @@
         <div class="footer-section">
             <h3>Quick Links</h3>
             <ul>
+                <li><a href="faq.php">FAQ</a></li>
                 <li><a href="#terms">Terms of Service</a></li>
                 <li><a href="#privacy">Privacy Policy</a></li>
-                <li><a href="#guidelines">Community Guidelines</a></li>
+                <li><a href="guidelines.php">Community Guidelines</a></li>
             </ul>
         </div>
         <div class="footer-section">
