@@ -63,21 +63,18 @@ session_start();
         <!-- Featured Categories -->
         <section class="featured-categories">
             <h2>Railway Categories</h2>
+            <a href="forum_category.php" class="category-card-link">
             <div class="category-grid">
                 <div class="category-card">
                     <i class="fas fa-train"></i>
-                    <h3>Modern Railways</h3>
+                    <h3>Train Operations</h3>
                     <p>850 Topics</p>
                 </div>
+                
                 <div class="category-card">
                     <i class="fas fa-history"></i>
-                    <h3>Heritage Railways</h3>
+                    <h3>Stations</h3>
                     <p>620 Topics</p>
-                </div>
-                <div class="category-card">
-                    <i class="fas fa-cog"></i>
-                    <h3>Technical Discussion</h3>
-                    <p>1.1k Topics</p>
                 </div>
                 <div class="category-card">
                     <i class="fas fa-map-marked-alt"></i>
@@ -85,6 +82,7 @@ session_start();
                     <p>450 Topics</p>
                 </div>
             </div>
+            </a>
         </section>
 
         <!-- Popular Topics -->
