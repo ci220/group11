@@ -15,7 +15,7 @@ $users = [];
 if (isset($_GET['search'])) {
     $search = $_GET['search'];
     $stmt = $pdo->prepare("
-        SELECT id, first_name, second_name, username 
+        SELECT id, first_name, second_name, username, profile_picture
         FROM users 
         WHERE (first_name LIKE :search OR second_name LIKE :search OR username LIKE :search) 
         AND id != :current_user
@@ -116,21 +116,22 @@ if (isset($_GET['search'])) {
 <body>
     <script>
         function updateFriend(action, friendId) {
-            fetch(`update_friend.php?action=${action}&friend_id=${friendId}`)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        alert(data.message);
-                        location.reload();
-                    } else {
-                        alert("Error: " + data.message);
-                    }
-                })
-                .catch(error => {
-                    console.error("Error:", error);
-                    alert("An error occurred. Please try again.");
-                });
-        }
+    fetch(`update_friend.php?action=${action}&friend_id=${friendId}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert(data.message); // Show the notification
+                window.location.href = 'chat.php'; // Redirect to chat.php
+            } else {
+                alert("Error: " + data.message); // Show error if something goes wrong
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("An error occurred. Please try again.");
+        });
+}
+
     </script>
 </head>
 <body>
@@ -152,7 +153,9 @@ if (isset($_GET['search'])) {
                 <?php foreach ($users as $user): ?>
                     <div class="friend-card">
                         <div class="friend-details">
-                            <img src="https://via.placeholder.com/50" alt="Profile Picture">
+                            <img src="<?php echo !empty($user['profile_picture']) ? 'uploaded_img/' . htmlspecialchars($user['profile_picture']) : 'https://via.placeholder.com/50'; ?>" 
+                            alt="Profile Picture" 
+                            class="friend-profile-picture">
                             <div>
                                 <h6 class="mb-0"><?php echo htmlspecialchars($user['first_name'] . ' ' . $user['second_name']); ?></h6>
                                 <small>@<?php echo htmlspecialchars($user['username']); ?></small>
