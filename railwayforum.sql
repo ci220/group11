@@ -102,6 +102,13 @@ CREATE TABLE `posts` (
   `likes` int(11) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
+CREATE TABLE post_likes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    post_id INT NOT NULL,
+    UNIQUE KEY (user_id, post_id)
+);
+
 CREATE TABLE `discussions` (
   `id` int(11) NOT NULL,
   `category` varchar(255) NOT NULL,
