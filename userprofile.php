@@ -47,7 +47,7 @@ if (!$user) {
     <div class="profile-links">
         <a href="create_post.php" class="profile-link">+ Create Post</a>
         <span class="link-separator">|</span>
-        <a href="my_posts.php" class="profile-link">My Posts</a>
+        <a href="myposts.php" class="profile-link">My Posts</a>
     </div>
         
         <form class="profile-form">
