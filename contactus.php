@@ -25,7 +25,7 @@
         <!-- Right Side: Contact Form -->
         <div class="contact-container">
             <h2>Contact Us</h2>
-            <form method="POST" action="contactus.php">
+            <form method="POST" action="contact_handler.php"> <!-- Correctly point to contact_handler.php -->
                 <div class="form-group">
                     <input type="text" name="name" placeholder="Your Name" required>
                 </div>
