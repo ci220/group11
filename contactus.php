@@ -15,7 +15,7 @@
     <div class="main-layout">
         <!-- Left Side: Picture with Text Overlay -->
         <div class="left-section">
-            <img src="image/header.jpg" alt="Contact Us" class="left-image">
+            <img src="image/contactus.jpg" alt="Contact Us" class="left-image">
             <div class="overlay">
                 <h2>Get in Touch</h2>
                 <h3>We are here to assist you. Get in touch with us</h3>
