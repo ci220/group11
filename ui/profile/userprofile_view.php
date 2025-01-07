@@ -5,6 +5,18 @@
 <main>
     <div class="profile-container">
         <h2>User Profile</h2>
+
+            <?php
+                if (!empty($_SESSION['_flash'])) {
+                    foreach ($_SESSION['_flash'] as $key => $message) {
+                        if ($key === 'success') {
+                            echo "<div class='success-message'>$message</div>";
+                        } elseif ($key === 'error') {
+                            echo "<div class='error-message'>$message</div>";
+                        }
+                    }
+                } 
+            ?>
         <div class="profile-picture-container">
         <?php 
         $profilePicture = !empty($user['profile_picture']) ? '/uploads/images/profile/' . htmlspecialchars($user['profile_picture']) : 'image/Avatar.png'; 
