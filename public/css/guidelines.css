@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+.guidelines-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+h1 {
+  text-align: center;
+  color: #444;
+}
+.guideline {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+.guideline:last-child {
+  border-bottom: none;
+}
+.guideline h2 {
+  font-size: 1.5rem;
+  color: #0056b3;
+}
+.guideline p {
+  font-size: 1rem;
+  color: #555;
+}
+.recent-updates, .example-scenarios {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+.recent-updates ul, .example-scenarios ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.acknowledgment {
+  margin-top: 20px;
+  text-align: center;
+}
+.acknowledgment button {
+  padding: 10px 15px;
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.acknowledgment button:hover {
+  background-color: #003f8a;
+}

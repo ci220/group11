@@ -1,0 +1,161 @@
+/* Main Container */
+.chat-container {
+  max-width: 1200px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+
+.chat-wrapper {
+  display: flex;
+  height: calc(100vh - 200px);
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Friends Sidebar */
+.friends-sidebar {
+  width: 25%;
+  border-right: 1px solid #e5e7eb;
+  overflow-y: auto;
+}
+
+.friends-header {
+  padding: 16px;
+}
+
+.friends-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.friend-item {
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.friend-item:hover {
+  background-color: #f3f4f6;
+}
+
+.friend-info {
+  display: flex;
+  align-items: center;
+}
+
+.friend-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.no-friends {
+  color: #6b7280;
+}
+
+/* Chat Main Area */
+.chat-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#chat-header {
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+#chat-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  background-color: #ffffff;
+}
+
+.message {
+  max-width: 70%;
+  margin-bottom: 1rem;
+}
+
+.message p {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  border-radius: 20px;
+  margin: 0;
+}
+
+.message.sent {
+  margin-left: auto;
+  text-align: right;
+}
+
+.message.sent p {
+  background-color: #dcf8c6;
+  color: #000;
+}
+
+.message.received {
+  margin-right: auto;
+}
+
+.message.received p {
+  background-color: #ebeaea;
+  color: #000;
+}
+
+.message small {
+  display: block;
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 0.25rem;
+  text-align: inherit;
+}
+
+.message-input-container {
+  padding: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+#message-form {
+  display: flex;
+  gap: 8px;
+}
+
+#message-input {
+  flex: 1;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 8px;
+  outline: none;
+}
+
+#message-input:focus {
+  border-color: #3b82f6;
+}
+
+#message-form button {
+  padding: 8px 16px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#message-form button:hover {
+  background-color: #2563eb;
+}
+
+#message-form button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
