@@ -15,9 +15,9 @@
             <div class="footer-section">
                 <h3>Connect With Us</h3>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/?lang=en-my"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
